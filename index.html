@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhairya's Blog</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #ccc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #2d2d2d;
+        }
+
+        header .logo {
+            font-size: 24px;
+            color: #89cff0;
+        }
+
+        header nav a {
+            margin: 0 10px;
+            color: #89cff0;
+            text-decoration: none;
+        }
+
+        header .theme-toggle {
+            cursor: pointer;
+        }
+
+        .center-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .logo-circle {
+            background: #000;
+            color: #333;
+            border-radius: 100%;
+            width: 125px;
+            height: 125px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        p {
+            color: #89cff0;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            background: #2d2d2d;
+            color: #ccc;
+        }
+
+        /* Light theme styles */
+        .light-theme {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .light-theme header, .light-theme footer {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .light-theme header .logo, .light-theme header nav a {
+            color: #0056b3;
+        }
+
+        .light-theme .logo-circle {
+            background: #e0e0e0;
+            color: #0056b3;
+        }
+
+        .light-theme p, .light-theme .social-icons a {
+            color: #333;
+        }
+
+        .light-theme .theme-toggle {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>Shah </span>Dhairya
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <!-- <span class="theme-toggle">☀️</span> -->
+        </nav>
+    </header>
+    
+    <div class="center-content">
+        <div class="logo-circle">
+            <span>SDH</span>
+        </div>
+        <h1>Shah Dhairya H</h1>
+        <p>A personal blog</p>
+        <div class="social-icons">
+            <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="email-icon.png" alt="Email"></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Dhairya</p>
+        <p>Published By Shah Dhairya</p>
+    </footer>
+
+    <script>
+        // Theme Toggle Script
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.querySelector(".theme-toggle");
+
+            themeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("light-theme");
+                themeToggle.textContent = document.body.classList.contains("light-theme") ? "🌙" : "☀️";
+
+                // Update Navbar and Footer classes
+                const navbar = document.querySelector('.navbar');
+                const footer = document.querySelector('footer');
+
+                if (document.body.classList.contains("light-theme")) {
+                    navbar.classList.add("navbar-light");
+                    footer.classList.add("light");
+                } else {
+                    navbar.classList.remove("navbar-light");
+                    footer.classList.remove("light");
+                }
+            });
+
+            // Blog Post Click Handler
+            document.querySelectorAll('.blog-post').forEach(post => {
+                post.addEventListener('click', () => {
+                    const url = post.getAttribute('data-url');
+                    window.location.href = url;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhairya's - Blog</title>
+    <style>
+        /* Reset some default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #ccc;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: #2d2d2d;
+        }
+
+        header .logo {
+            font-size: 24px;
+            color: #89cff0;
+        }
+
+        header nav a {
+            margin: 0 10px;
+            color: #89cff0;
+            text-decoration: none;
+        }
+
+        header .theme-toggle {
+            cursor: pointer;
+        }
+
+        /* Blog List */
+        .blog-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 41px;
+        }
+
+        .blog-card {
+            background: #444;
+            color: #ccc;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .blog-card:hover {
+            background: #555;
+        }
+
+        .blog-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .blog-card h3 {
+            margin: 10px 0;
+        }
+
+        .blog-card p {
+            font-size: 14px;
+            color: #89cff0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            background: #2d2d2d;
+            color: #ccc;
+        }
+
+        /* Light theme styles */
+        .light-theme {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .light-theme header, .light-theme footer {
+            background: #ddd;
+        }
+
+        .light-theme .blog-card {
+            background: #fff;
+            color: #333;
+        }
+
+        .light-theme header .logo,
+        .light-theme header nav a,
+        .light-theme .blog-card p {
+            color: #007acc;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <span>Shah </span>Dhairya
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <!-- <span class="theme-toggle">☀️</span> -->
+        </nav>
+    </header>
+
+    <!-- Blog List Section -->
+    <div class="blog-list">
+        <!-- Blog 1 Card -->
+        <a href="./blog1.html" class="blog-card">
+            <img src="./blog-post/start-codeing-2025/hq720.jpg" alt="Blog Image 1">
+            <h3>Start Codeing in 2025: Your Path to Tech Success</h3>
+            <p>Click to read more about this blog post.</p><br><h3>Post Date : 07/11/2024 At 02:28 </h3>
+        </a>
+
+        <!-- Blog 2 Card -->
+        <a href="blog2.html" class="blog-card">
+            <img src="./blog-post/python-power-2024/1.jpeg" alt="Blog Image 2">
+            <h3>The Ultimate Power of Python in 2024 for Developers</h3>
+            <p>Click to read more about this blog post.</p><br><h3>Post Date : 11/12/2024 At 23:49</h3>
+        </a>
+
+        <!-- Blog 3 Card -->
+        <!-- <a href="blog3.html" class="blog-card">
+            <img src="image3.jpg" alt="Blog Image 3">
+            <h3>Blog Post 3</h3>
+            <p>Click to read more about this blog post.</p><br><h3>Post Date : 07/11/2024</h3>
+        </a> -->
+
+        <!-- Blog 4 Card -->
+        <!-- <a href="blog4.html" class="blog-card">
+            <img src="image4.jpg" alt="Blog Image 4">
+            <h3>Blog Post 4</h3>
+            <p>Click to read more about this blog post.</p><br><h3>Post Date : 07/11/2024</h3>
+        </a> -->
+    </div><br><br><br><br><br><br><br>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Shah Dhairya</p>
+        <p>Published By Shah DHairya H.</p>
+    </footer>
+
+    <!-- JavaScript for Theme Toggle -->
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const themeToggle = document.querySelector(".theme-toggle");
+
+            themeToggle.addEventListener("click", () => {
+                document.body.classList.toggle("light-theme");
+                themeToggle.textContent = document.body.classList.contains("light-theme") ? "🌙" : "☀️";
+            });
+        });
+    </script> -->
+</body>
+</html>
